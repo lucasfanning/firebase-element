@@ -452,7 +452,7 @@ Example:
     },
     dataChange: function() {
       //this.job('change', function() {
-        if (this.data) {
+        if (this.data && typeof(this.data) == "object") {
           this.keys = this.data ? Object.keys(this.data) : [];
         }
         this.fire('data-change');
